@@ -54,7 +54,7 @@
           Эффективные решения для <br />
           вашего бизнеса
         </h1>
-        <a href="" class="order-button">Заказать услугу</a>
+        <button class="order-button" data-modal-open>Заказать услугу</button>
       </section>
       <section class="advantages-section">
         <!--Section2-->
@@ -393,5 +393,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close>
+          <svg width="18" height="18">
+            <use href="./images/newsprite.svg#close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
