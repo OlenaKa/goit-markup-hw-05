@@ -34,17 +34,17 @@ ul {
 .main-nav {
   display: flex;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .main-nav > nav {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
 .site-nav {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -83,6 +83,7 @@ footer .logostudio {
 }
 
 .site-nav .link {
+  display: inline-flex;
   color: var(--secondary-color);
   font-weight: 500;
   line-height: 1.14;
@@ -98,6 +99,27 @@ footer .logostudio {
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.site-nav .item {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.item.current {
+  position: relative;
+}
+
+.item.current::after {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 97%;
+  content: "";
+  height: 4px;
+  background-image: url(../images/hover.svg);
+  background-repeat: no-repeat;
 }
 
 .header-address .link {
@@ -133,6 +155,7 @@ footer .logostudio {
   text-transform: uppercase;
 }
 .main-section {
+  text-align: center;
   max-width: 1600px;
   max-height: 600px;
   margin-left: auto;
@@ -146,7 +169,6 @@ footer .logostudio {
   background-repeat: no-repeat;
   background-position: center;
 
-  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--bg-secondary-color);
@@ -167,12 +189,12 @@ footer .logostudio {
 }
 
 .section-title {
+  text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   color: var(--secondary-color);
 }
 
@@ -239,9 +261,9 @@ footer .logostudio {
 
 .activity-item::before {
   content: "";
+  position: absolute;
   width: 100%;
   height: 70px;
-  position: absolute;
   bottom: 0;
   background-color: rgba(47, 48, 58, 0.8);
 }
@@ -358,9 +380,9 @@ footer .logostudio {
 }
 
 .client {
+  display: flex;
   width: calc((100% - 150px) / 6);
   margin-right: 30px;
-  display: flex;
 }
 .client .client-link:nth-child(6n) {
   margin-right: 0;
@@ -520,6 +542,8 @@ address {
 }
 .joinus {
   display: inline-block;
+  text-transform: uppercase;
+  text-align: left;
   width: 206px;
   font-family: Roboto;
   font-style: normal;
@@ -527,8 +551,6 @@ address {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-align: left;
   margin-right: 0;
   margin-left: 70px;
 }
