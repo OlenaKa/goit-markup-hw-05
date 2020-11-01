@@ -89,6 +89,8 @@ footer .logostudio {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -115,11 +117,11 @@ footer .logostudio {
   display: block;
   bottom: 0;
   left: 0;
-  width: 97%;
+  width: 100%;
   content: "";
   height: 4px;
-  background-image: url(../images/hover.svg);
-  background-repeat: no-repeat;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .header-address .link {
@@ -129,6 +131,9 @@ footer .logostudio {
   letter-spacing: 0.02em;
   font-style: normal;
   text-decoration: none;
+
+  /* transition: color 6050ms cubic-bezier(0.4, 0, 0.2, 1),
+    --color1 6050ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .header-address .link:hover,
@@ -260,13 +265,18 @@ footer .logostudio {
 }
 
 .activity-item::before {
-  content: "";
   position: absolute;
+
+  content: "";
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 70px;
   bottom: 0;
+  left: 0;
   background-color: rgba(47, 48, 58, 0.8);
 }
+
 .activity-item {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
@@ -281,9 +291,8 @@ footer .logostudio {
   position: absolute;
   bottom: 27px;
   width: 370px;
-  /* text-align: center;
-  padding: 0; */
 }
+
 .activity-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -500,6 +509,29 @@ footer .logostudio {
   line-height: 1.87;
   color: var(--primary-text-color);
   margin-top: 0;
+}
+
+.project-picture {
+  position: relative;
+}
+
+.project-overlap {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  padding: 63px 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.56;
+
+  opacity: 0;
+}
+
+.project-overlap:hover {
+  opacity: 1;
 }
 
 footer {
